@@ -31,8 +31,7 @@ public class SplitSearch {
      */
     public static Object splitSearch(int[] ints, int startIndex, int endIndex, int target){
 
-        // 拿到一个给定的数组，
-        // 数组的长度
+        // 拿到一个给定的数组，g数组的长度
         int len = ints.length;
 
         if( startIndex > endIndex ){
