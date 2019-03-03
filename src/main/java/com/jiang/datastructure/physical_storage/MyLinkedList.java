@@ -45,18 +45,22 @@ public class MyLinkedList {
 
     /**
      * 向链表尾部追加一个新的节点
+     * 由第一个节点不断的向后面去寻找，这里引入指针的概念，所谓指针即当前节点，
+     * 当当前节点的下一个节点为 null时，说明当前节点是链表的最后一个节点，
+     * 直接调用当前节点的setNext()方法追加节点即可
+     * <see>向链表中添加元素.png</see>
      * @param value
      */
     public void add(Object value){
         Node node = new Node(value);
         if(this.start != null){
             // 创建一个指针节点
-            Node next = this.start;
+            Node current = this.start;
             // 指针节点如果有下一个节点，说明指针节点不是还不是最后一个节点
-            while(next.getNext() != null){
-                next = next.getNext();
+            while(current.getNext() != null){
+                current = current.getNext();
             }
-            next.setNext(node);
+            current.setNext(node);
         }else{
             this.start = node;
         }
