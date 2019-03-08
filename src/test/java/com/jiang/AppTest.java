@@ -42,4 +42,16 @@ public class AppTest
 
         System.out.println(new SimpleDateFormat("yyyy-mm-dd HH:MM:SS").format(result));
     }
+
+
+    @Test
+    public void aa_01 (){
+        String[] aa = null;
+
+        for(String s : aa){
+            System.out.println(s);
+        }
+
+    }
+
 }
